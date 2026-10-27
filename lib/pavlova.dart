@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 void main() => runApp(const PavlovaApp());
 
+
 class PavlovaApp extends StatelessWidget {
   const PavlovaApp({super.key});
 
@@ -10,16 +11,19 @@ class PavlovaApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(useMaterial3: true, fontFamily: 'Roboto'),
-      home: const Scaffold(
+      home: Scaffold(
         backgroundColor: Colors.white,
-        body: SafeArea(
+        appBar: AppBar(
+          title: const Text('Pavlova_Pajaron'),
+          backgroundColor: Colors.white,
+        ),
+        body: const SafeArea(
           child: SingleChildScrollView(child: RecipeCard()),
         ),
       ),
     );
   }
 }
-
 class RecipeCard extends StatelessWidget {
   const RecipeCard({super.key});
 
